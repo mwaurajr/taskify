@@ -22,7 +22,7 @@ class TasksController < ApplicationController
         @task = Task.find(params[:id])
         @task.update(completed: params[:completed])
       
-        render json: { message: "Success" }
+        render json: { message: "Item selected  " }
       end
       
   
