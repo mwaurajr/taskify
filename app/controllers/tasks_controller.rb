@@ -5,6 +5,10 @@ class TasksController < ApplicationController
         @task = Task.new
       end
 
+      def show 
+        
+      end
+
 
     def create
       @task = Task.new(task_params)
@@ -24,7 +28,17 @@ class TasksController < ApplicationController
       
         # render json: { message: "Item selected  " }
       end
+
+      def edit
+        @task = Task.find(params[:id])
+      end
       
+
+      def destroy
+        @task = Task.find(params[:id])
+        @task.destroy
+        redirect_to tasks_url, notice: "Post was successfully deleted."
+      end
   
     private
   

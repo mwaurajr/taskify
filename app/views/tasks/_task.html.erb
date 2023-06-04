@@ -12,9 +12,7 @@
               class: "btn bg-gray-100"
   %>
   <div class="inline-block ml-2">
-    <%= button_to "Delete", task_path(task),
-                  method: :delete,
-                  class: "btn bg-red-100" %>
+    <%= button_to "Delete", task_path(task), method: :delete, data: { "turbo-frame": "_top" }, class: "btn bg-red-100" %>
   </div>
 </div>
 
